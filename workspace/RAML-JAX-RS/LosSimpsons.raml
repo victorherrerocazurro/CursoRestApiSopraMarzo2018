@@ -1,0 +1,42 @@
+#%RAML 1.0
+title: Los Simpsons
+baseUri: http://localhost:8080/LosSimpsons/api/{version}
+version: v1
+mediaType: application/json
+/personajes:
+  get:
+    description: Permite obtener todos los personajes de la serie de los Simpsons
+    queryParameters:
+      apellido:
+        description: apellido del personaje
+    responses:
+      200:
+        body:
+          schema: |
+            {
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "type": "array",
+            "description": "personajes",
+            "items":
+              {
+                "type": "object",
+                "properties": {
+                  "nombre": { "type": "string" },
+                  "apellido": { "type": "string"}
+                }
+              }
+            }
+  put:
+  
+  /{id}:
+    get:
+    put:
+    patch:
+    
+    /hermanos:
+      get:
+      
+
+/actores:
+
+/capitulos:
